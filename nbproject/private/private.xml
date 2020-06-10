@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/implementacionDAO/UsuarioDAOImplementacion.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/RegistroUsuarioServlet.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/EliminarProductoFactura.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/implementacionDAO/FacturaImpl.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/DAO/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/AddProductosaFactura.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/DAO/FacturaDAO.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/productos.jsp</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/CrearFactura.jsp</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/util/BaseDatos.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/DAO/ProductosFacturaDAO.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/Factura.jsp</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/Componentes/Registro.jsp</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/implementacionDAO/ProductosFacturaImpl.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/implementacionDAO/TipoPagoImpl.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/MisFacturas.jsp</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/implementacionDAO/ProductoDAOImplementacion.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/DAO/FormaPagoDAO.java</file>
+        </group>
+    </open-files>
+</project-private>
