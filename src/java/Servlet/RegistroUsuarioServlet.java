@@ -56,13 +56,15 @@ public class RegistroUsuarioServlet extends HttpServlet {
                     respuesta = dao.GuardarUsuario(persona);
                     System.out.println(respuesta);
                     request.setAttribute("respuesta", respuesta);
+                    out.println("<script>alert('Se registro correctamente');</script>");
+                    out.println("<script>window.location.href='index.jsp';</script>");
                     
                 
                 
                 rd = request.getRequestDispatcher("index.jsp");
             } catch (Exception e) {
             }
-            rd.forward(request, response);
+            
         }
     }
 

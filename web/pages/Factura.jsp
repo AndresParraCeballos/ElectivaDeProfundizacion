@@ -94,7 +94,7 @@
                                 String barra = pro.getPro_codigobarra();
                                 int precio = pro.getPro_precio();
                                 
-                                precioTotal += cantidad*precio;
+                                precioTotal += cantidad*precio; 
                                 %>
                                         <tr>
                                             <td>
