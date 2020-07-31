@@ -5,6 +5,7 @@
  */
 package Servlet;
 
+import ControladorJPA.UsuarioJpaController;
 import DAO.UsuarioDAO;
 import implementacionDAO.UsuarioDAOImplementacion;
 import java.io.Console;
@@ -24,7 +25,9 @@ import modelo.Usuario;
  * @author Andre
  */
 public class RegistroUsuarioServlet extends HttpServlet {
-
+    
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -40,6 +43,7 @@ public class RegistroUsuarioServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             UsuarioDAOImplementacion dao = new UsuarioDAOImplementacion();
             Usuario persona = new Usuario();
+            
             List<Usuario> datos = new ArrayList<>();
             String respuesta="";
             RequestDispatcher rd = null;
@@ -63,6 +67,8 @@ public class RegistroUsuarioServlet extends HttpServlet {
                 
                 rd = request.getRequestDispatcher("index.jsp");
             } catch (Exception e) {
+                out.println("<script>alert('No se registro correctamente');</script>");
+                out.println("<script>window.location.href='index.jsp';</script>");
             }
             
         }

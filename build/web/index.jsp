@@ -1,6 +1,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%System.out.println("hla");%>
 <!DOCTYPE html>
 <html>
     <head>

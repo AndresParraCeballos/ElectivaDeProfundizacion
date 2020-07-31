@@ -162,6 +162,11 @@
                 </form>
             </div>
         </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <a class="text-white btn btn-danger btn-block" href="productos.jsp?idComprador=<%=idComprador%>&idFactura=<%=idFactura%>">Seguir comprando </a>
+                        </div>
+                    </div>
         </div>
     </body>
 </html>

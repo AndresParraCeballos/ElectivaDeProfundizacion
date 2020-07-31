@@ -50,7 +50,7 @@ public class EliminarProductoFactura extends HttpServlet {
                 int cantidadT = pro.getPro_cantidad_disponible()+cantidad;
                 String edit = daoP.editProducto(cantidadT, pro.getIdproducto());
                 out.println("<script>alert('Se elimino producto de la factura');</script>");
-                out.println("<script>window.location.href='Factura.jsp?idfactura="+idFactura+"&idComprador="+ idComprador +"';</script>");
+                out.println("<script>window.location.href='pages/Factura.jsp?idfactura="+idFactura+"&idComprador="+ idComprador +"';</script>");
             }else{
                 out.println("dsjfb");
             }
