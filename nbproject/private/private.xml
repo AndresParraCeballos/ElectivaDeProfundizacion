@@ -12,6 +12,7 @@
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/CompletarFactura.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/Factura.jsp</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/DAO/ProductosFacturaDAO.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Entidades/Formaspagos.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/FacturaCreada.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/Componentes/Registro.jsp</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/implementacionDAO/TipoPagoImpl.java</file>
@@ -27,11 +28,13 @@
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/AddProductosaFactura.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/DAO/ProductoDAO.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/productos.jsp</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/util/principal.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/modelo/Estados.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/web/pages/CrearFactura.jsp</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/Servlet/CancelarFactura.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/util/BaseDatos.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/modelo/Factura.java</file>
+            <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/ControladorJPA/UsuarioJpaController.java</file>
             <file>file:/C:/Users/Andre/Documents/NetBeansProjects/ElectivaDeProfundizacion/src/java/modelo/Usuario.java</file>
         </group>
     </open-files>

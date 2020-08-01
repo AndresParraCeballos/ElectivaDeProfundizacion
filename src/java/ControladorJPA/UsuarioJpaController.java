@@ -29,12 +29,14 @@ import javax.transaction.UserTransaction;
  */
 public class UsuarioJpaController implements Serializable {
 
-    public UsuarioJpaController(UserTransaction utx, EntityManagerFactory emf) {
+    public UsuarioJpaController(UserTransaction utx) {
         this.utx = utx;
         this.emf = Persistence.createEntityManagerFactory("ElectivaDeProfundizacionPU"); 
     }
     private UserTransaction utx = null;
     private EntityManagerFactory emf = null;
+
+  
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
