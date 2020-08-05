@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.transaction.UserTransaction;
 
@@ -29,11 +30,13 @@ import javax.transaction.UserTransaction;
  */
 public class UsuarioJpaController implements Serializable {
 
-    public UsuarioJpaController(UserTransaction utx) {
+    public UsuarioJpaController() {
         this.utx = utx;
         this.emf = Persistence.createEntityManagerFactory("ElectivaDeProfundizacionPU"); 
     }
-    private UserTransaction utx = null;
+    
+    private EntityTransaction utx = null;
+    
     private EntityManagerFactory emf = null;
 
   
@@ -50,9 +53,12 @@ public class UsuarioJpaController implements Serializable {
             usuario.setFacturaCollection1(new ArrayList<Factura>());
         }
         EntityManager em = null;
+        
         try {
-            utx.begin();
             em = getEntityManager();
+            utx=em.getTransaction();
+            utx.begin();
+            
             Collection<Factura> attachedFacturaCollection = new ArrayList<Factura>();
             for (Factura facturaCollectionFacturaToAttach : usuario.getFacturaCollection()) {
                 facturaCollectionFacturaToAttach = em.getReference(facturaCollectionFacturaToAttach.getClass(), facturaCollectionFacturaToAttach.getIdfactura());
@@ -102,8 +108,9 @@ public class UsuarioJpaController implements Serializable {
     public void edit(Usuario usuario) throws IllegalOrphanException, NonexistentEntityException, RollbackFailureException, Exception {
         EntityManager em = null;
         try {
-            utx.begin();
             em = getEntityManager();
+            utx=em.getTransaction();
+            utx.begin();
             Usuario persistentUsuario = em.find(Usuario.class, usuario.getIdusuario());
             Collection<Factura> facturaCollectionOld = persistentUsuario.getFacturaCollection();
             Collection<Factura> facturaCollectionNew = usuario.getFacturaCollection();
@@ -191,8 +198,9 @@ public class UsuarioJpaController implements Serializable {
     public void destroy(Integer id) throws IllegalOrphanException, NonexistentEntityException, RollbackFailureException, Exception {
         EntityManager em = null;
         try {
-            utx.begin();
             em = getEntityManager();
+            utx=em.getTransaction();
+            utx.begin();
             Usuario usuario;
             try {
                 usuario = em.getReference(Usuario.class, id);
