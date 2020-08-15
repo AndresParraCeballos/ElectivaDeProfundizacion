@@ -31,11 +31,12 @@ import javax.transaction.UserTransaction;
 public class UsuarioJpaController implements Serializable {
 
     public UsuarioJpaController() {
-        this.utx = utx;
+        
         this.emf = Persistence.createEntityManagerFactory("ElectivaDeProfundizacionPU"); 
-    }
+        em = emf.createEntityManager();
+    }   
     
-    private EntityTransaction utx = null;
+    private EntityManager em = null;
     
     private EntityManagerFactory emf = null;
 
@@ -52,12 +53,11 @@ public class UsuarioJpaController implements Serializable {
         if (usuario.getFacturaCollection1() == null) {
             usuario.setFacturaCollection1(new ArrayList<Factura>());
         }
-        EntityManager em = null;
+        
         
         try {
-            em = getEntityManager();
-            utx=em.getTransaction();
-            utx.begin();
+            em.getTransaction().begin();
+            
             
             Collection<Factura> attachedFacturaCollection = new ArrayList<Factura>();
             for (Factura facturaCollectionFacturaToAttach : usuario.getFacturaCollection()) {
@@ -90,10 +90,10 @@ public class UsuarioJpaController implements Serializable {
                     oldIdUsuariocompradorOfFacturaCollection1Factura = em.merge(oldIdUsuariocompradorOfFacturaCollection1Factura);
                 }
             }
-            utx.commit();
+            em.getTransaction().commit();
         } catch (Exception ex) {
             try {
-                utx.rollback();
+                em.getTransaction().rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
             }
@@ -108,9 +108,8 @@ public class UsuarioJpaController implements Serializable {
     public void edit(Usuario usuario) throws IllegalOrphanException, NonexistentEntityException, RollbackFailureException, Exception {
         EntityManager em = null;
         try {
-            em = getEntityManager();
-            utx=em.getTransaction();
-            utx.begin();
+            em.getTransaction().begin();
+            
             Usuario persistentUsuario = em.find(Usuario.class, usuario.getIdusuario());
             Collection<Factura> facturaCollectionOld = persistentUsuario.getFacturaCollection();
             Collection<Factura> facturaCollectionNew = usuario.getFacturaCollection();
@@ -173,10 +172,10 @@ public class UsuarioJpaController implements Serializable {
                     }
                 }
             }
-            utx.commit();
+            em.getTransaction().commit();
         } catch (Exception ex) {
             try {
-                utx.rollback();
+                em.getTransaction().rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
             }
@@ -198,9 +197,8 @@ public class UsuarioJpaController implements Serializable {
     public void destroy(Integer id) throws IllegalOrphanException, NonexistentEntityException, RollbackFailureException, Exception {
         EntityManager em = null;
         try {
-            em = getEntityManager();
-            utx=em.getTransaction();
-            utx.begin();
+            em.getTransaction().begin();
+            
             Usuario usuario;
             try {
                 usuario = em.getReference(Usuario.class, id);
@@ -227,10 +225,10 @@ public class UsuarioJpaController implements Serializable {
                 throw new IllegalOrphanException(illegalOrphanMessages);
             }
             em.remove(usuario);
-            utx.commit();
+            em.getTransaction().commit();
         } catch (Exception ex) {
             try {
-                utx.rollback();
+                em.getTransaction().rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
             }
